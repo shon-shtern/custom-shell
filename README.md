@@ -1,7 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/-AGB4N5E)
-This is the template repo for homework 1. Please start from here.
-
-
 Part 1
 -------
 In this part, I created a custom shell while still being allowed to use library functions with systemcalls. The process consists of a step where the stdin line is read and tokenized, a step to check if the user performed a valid exit, a step to check if the user performed a valid cd, and a fork/execution step to run the required command. The shell also manually handles interrupt calls like CTRL-C, ignoring them for the parent and stopping the execution of the command for the child. 
