@@ -9,8 +9,8 @@ LDFLAGS =
 # Library options:
 LDLIBS =
 
-w4118_sh2: shell2.o 
-	$(CC) $(LDFLAGS) $(LDLIBS) -o w4118_sh2 shell2.o
+shell: shell2.o 
+	$(CC) $(LDFLAGS) $(LDLIBS) -o shell shell2.o
 
 # Make uses the following implicit rule to compile a .c file into a .o file:
 #
@@ -28,7 +28,7 @@ shell2.o: shell2.h
 # a file called "clean".
 .PHONY: clean
 clean:
-	rm -f *.o a.out core w4118_sh2
+	rm -f *.o a.out core shell
 # The "all" target can be useful if your Makefile builds multiple programs.
 # Here we’ll have it first do "clean", and rebuild the myprogram target.
 #
@@ -37,4 +37,4 @@ clean:
 #
 # Dependencies are built in the order they are declared, left to right.
 .PHONY: all
-	all: clean w4118_sh2
+	all: clean shell
